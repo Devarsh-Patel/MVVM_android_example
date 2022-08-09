@@ -1,10 +1,10 @@
 package com.example.android.mvvmtest.model
 
 data class CocktailItem(
-    val isDrink: String,
+    val idDrink: String,
     val strDrink: String,
     val strTags: String,
-    val strImgSrc: String,
+    val strDrinkThumb: String,
     val strIngredient1: String,
     val strIngredient2: String,
     val strIngredient3: String,

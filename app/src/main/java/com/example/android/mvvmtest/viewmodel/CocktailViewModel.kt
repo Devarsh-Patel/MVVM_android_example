@@ -9,7 +9,6 @@ import com.example.android.mvvmtest.model.remote.API
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
-import kotlin.jvm.internal.Intrinsics
 
 class CocktailViewModel: ViewModel() {
 
@@ -29,7 +28,7 @@ class CocktailViewModel: ViewModel() {
 
     // Backing Field
     val cocktailDetails: LiveData<CocktailDetails>
-    get() = _cocktailDetails
+     get() = _cocktailDetails
 
 
     fun searchCocktail(cocktailName: String){
@@ -61,7 +60,7 @@ class CocktailViewModel: ViewModel() {
 
 
 
-    fun detailsCocktail(cocktailID: String){
+    fun getCocktailDetails(cocktailID: String){
         API.cocktailApi.queryCocktailDetails(cocktailID)
             .enqueue(
                 object: Callback<CocktailDetails>{
@@ -87,4 +86,6 @@ class CocktailViewModel: ViewModel() {
                 }
             )
     }
+
+
 }
